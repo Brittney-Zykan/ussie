@@ -1,0 +1,28 @@
+---
+title: "ussie"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ussie}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ussie)
+library(dplyr)
+```
+
+ussie let's you work with european soccer data from the engsoccerdata package
+by making standard tibbles for each country
+
+```{r matches_italy}
+matches_italy <- uss_make_matches(engsoccerdata::italy, "Italy")
+glimpse(matches_italy)
+```
