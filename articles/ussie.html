@@ -102,6 +102,14 @@
 <span><span class="co">#&gt; $ visitor       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "US Livorno", "Unione Triestina", "Bologna FC", "US Ales…</span></span>
 <span><span class="co">#&gt; $ goals_home    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 6, 3, 2, 0, 4, 0, 3, 1, 1, 1, 2, 4, 2, 2, 3, 2, 2, 2, 0,…</span></span>
 <span><span class="co">#&gt; $ goals_visitor <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 2, 0, 2, 1, 1, 1, 0, 2, 1, 1, 0, 1, 1, 1,…</span></span></code></pre></div>
+<p>you can even filter</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># matches_1929 &lt;- uss_make_matches("italy", season == 1929) |&gt;</span></span>
+<span><span class="co"># glimpse(matches_1929)</span></span></code></pre></div>
+<p>we can accumulate seasons</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># italy &lt;- uss_get_matches("italy") %&gt;%  uss_make_teams_matches()</span></span>
+<span><span class="co"># </span></span></code></pre></div>
   </main>
 </div>
 
