@@ -26,3 +26,9 @@ by making standard tibbles for each country
 matches_italy <- uss_make_matches(engsoccerdata::italy, "Italy")
 glimpse(matches_italy)
 ```
+
+you can even filter
+
+```{r matches_italy}
+
+```

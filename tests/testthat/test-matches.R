@@ -18,4 +18,7 @@ test_that("uss_make_matches works", {
   # it is important that tier is a factor (when you find a bug, add a test)
   expect_s3_class(italy$tier, "factor")
 
+  # setting new snapshot
+  expect_snapshot(dplyr::glimpse(italy))
+
 })

@@ -81,7 +81,7 @@ get_soccer_data <- function(data_name) {
 #' uss_get_matches("england")
 #' @export
 #'
-uss_get_matches <- function(country = uss_countries()) {
+uss_get_matches <- function(country = uss_countries(), ...) {
 
   # 2.2.1 side effects (errors)
   #
@@ -98,6 +98,8 @@ uss_get_matches <- function(country = uss_countries()) {
   # 1. put `...` into the formals
   # 2. pipe the results to `dplyr::filter(...)`
   # 3. @inheritParams dplyr::filter
+  #' @inheritParams dplyr::filter
+
   # 4. add a few words to the description
   # 5. add example
   #
@@ -105,7 +107,8 @@ uss_get_matches <- function(country = uss_countries()) {
   # (but we aren't doing that here)
   # https://design.tidyverse.org/dots-prefix.html
 
-  uss_make_matches(data, country)
+  uss_make_matches(data, country) %>%
+    dplyr::filter(...)
 }
 
 
