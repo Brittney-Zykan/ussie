@@ -29,6 +29,15 @@ glimpse(matches_italy)
 
 you can even filter
 
-```{r matches_italy}
-
+```{r matches_1929}
+# matches_1929 <- uss_make_matches("italy", season == 1929) |>
+# glimpse(matches_1929)
 ```
+
+we can accumulate seasons
+
+```{r}
+# italy <- uss_get_matches("italy") %>%  uss_make_teams_matches()
+# 
+```
+
